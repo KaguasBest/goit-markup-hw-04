@@ -480,6 +480,12 @@ nav > a {
   color: var(--pressed-state);
 }
 
+.customers-link:active,
+.customers-link:focus {
+  border: 1px solid var(--pressed-state);
+  color: var(--pressed-state);
+}
+
 /* End Customers block style */
 
 /* End Main block style */
@@ -625,7 +631,7 @@ nav > a {
 .modal-window {
   position: absolute;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   top: 50%;
   left: 50%;
   background-color: var(--modal-window-bg);
@@ -674,8 +680,8 @@ nav > a {
   fill: var(--white-background);
 }
 
-.modal-btn:active,
-.modal-btn:focus {
+.modal-btn:active .icon-modal,
+.modal-btn:focus .icon-modal {
   fill: var(--white-background);
 }
 /* Modal section style */
@@ -735,11 +741,10 @@ nav > a {
   width: 40px;
   height: 40px;
 }
-/* 
+
 .footer .social-link {
-  height: 100%;
   display: flex;
-} */
+}
 
 .footer-icon {
   width: 24px;
