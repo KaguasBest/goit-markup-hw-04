@@ -225,7 +225,7 @@ nav > a {
   content: '';
   background-color: var(--pressed-state);
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   border-radius: 2px;
   z-index: 999;
@@ -414,6 +414,8 @@ nav > a {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -463,8 +465,9 @@ nav > a {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: var(--subtl-text);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--subtl-text);
+  fill: currentColor;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-customers {
@@ -474,7 +477,7 @@ nav > a {
 
 .customers-link:hover {
   border: 1px solid var(--pressed-state);
-  fill: var(--pressed-state);
+  color: var(--pressed-state);
 }
 
 /* End Customers block style */
@@ -705,7 +708,6 @@ nav > a {
   line-height: 1.17;
   color: var(--primary-brand);
   display: inline-block;
-  margin-bottom: 16px;
 }
 
 .footer-logo,
@@ -729,17 +731,27 @@ nav > a {
   gap: 16px;
 }
 
+.social-list-footer .social-item {
+  width: 40px;
+  height: 40px;
+}
+/* 
+.footer .social-link {
+  height: 100%;
+  display: flex;
+} */
+
 .footer-icon {
   width: 24px;
   height: 24px;
 }
 
-.social-link:hover {
+.footer .social-link:hover {
   background-color: var(--sucess);
 }
 
-.social-link:active,
-.social-link:focus {
+.footer .social-link:active,
+.footer .social-link:focus {
   background-color: var(--sucess);
 }
 
