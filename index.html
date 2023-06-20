@@ -56,7 +56,7 @@
             Effective Solutions<br />
             for Your Business
           </h1>
-          <button type="button" class="button-introduce">Order Service</button>
+          <button type="button" class="button-introduce" data-modal-open>Order Service</button>
         </div>
       </section>
       <!-- End Introduce section -->
@@ -332,6 +332,19 @@
       </section>
       <!-- End Customers section -->
     </main>
+
+    <!-- Modal section -->
+    <section class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="icon-modal">
+            <use href="./images/icons.svg#icon-close-modal-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <!-- End Modal section -->
+
     <!-- End Main block -->
 
     <!-- Footet section -->
@@ -379,5 +392,6 @@
       </div>
     </footer>
     <!-- End Footet section -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
